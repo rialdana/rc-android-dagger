@@ -24,9 +24,12 @@ import com.example.android.dagger.R
 import com.example.android.dagger.main.MainActivity
 import com.example.android.dagger.registration.enterdetails.EnterDetailsFragment
 import com.example.android.dagger.registration.termsandconditions.TermsAndConditionsFragment
+import javax.inject.Inject
 
 class RegistrationActivity : AppCompatActivity() {
 
+    // field injection
+    @Inject
     lateinit var registrationViewModel: RegistrationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
