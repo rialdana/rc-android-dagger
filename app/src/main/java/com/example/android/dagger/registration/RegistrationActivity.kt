@@ -32,10 +32,14 @@ class RegistrationActivity : AppCompatActivity() {
     @Inject
     lateinit var registrationViewModel: RegistrationViewModel
 
+    // keeping an instance of registration component for fragments to access to it
+    lateinit var registrationComponent: RegistrationComponent
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        // Injecting our dependencies
-        (application as MyApplication).appComponent.inject(this)
+        registrationComponent = (application as MyApplication).appComponent.registrationComponent().create()
+
+        registrationComponent.inject(this)
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
