@@ -41,7 +41,7 @@ class ApplicationTest {
         onView(withText("REGISTER")).perform(click())
 
         // Main
-        onView(withText("Hello username!")).check(matches(isDisplayed()))
+        onView(withText("Hello Username!")).check(matches(isDisplayed()))
         onView(withText("SETTINGS")).perform(click())
 
         // Settings
@@ -54,7 +54,7 @@ class ApplicationTest {
         onView(withText("LOGIN")).perform(click())
 
         // Main
-        onView(withText("Hello username!")).check(matches(isDisplayed()))
+        onView(withText("Hello Username!")).check(matches(isDisplayed()))
         onView(withText("SETTINGS")).perform(click())
 
         // Settings
